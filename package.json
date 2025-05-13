@@ -1,0 +1,24 @@
+{
+    "name": "arc-like-extension",
+    "version": "0.1.0",
+    "description": "Arc Style Tab Manager Chrome Extension",
+    "type": "module",
+    "scripts": {
+        "dev": "vite build --watch",
+        "build": "vite build",
+        "format": "prettier --write ."
+    },
+    "devDependencies": {
+        "@types/chrome": "^0.0.321",
+        "@types/node": "^22.15.17",
+        "autoprefixer": "^10.0.0",
+        "daisyui": "^5.0.0",
+        "prettier": "3.5.3",
+        "prettier-plugin-tailwindcss": "^0.6.11",
+        "tailwindcss": "^4.0.0",
+        "vite": "^5.0.0"
+    },
+    "dependencies": {
+        "@tailwindcss/vite": "^4.1.6"
+    }
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Arc Style Tab Manager Settings</title>
+        <link rel="stylesheet" href="./src/popup/popup.css" />
+    </head>
+    <body class="bg-base-100 text-base-content">
+        <div class="mx-auto max-w-md min-w-[320px] p-4">
+            <h2 class="text-primary mb-6 text-center text-xl font-semibold">Settings</h2>
+
+            <div class="space-y-5">
+                <!-- Enable Auto Archive -->
+                <div class="form-control">
+                    <label class="label cursor-pointer p-0">
+                        <span class="label-text text-base">Enable Auto Archive</span>
+                        <input
+                            type="checkbox"
+                            id="autoArchiveEnabled"
+                            class="toggle toggle-primary"
+                        />
+                    </label>
+                </div>
+
+                <!-- Archive tabs inactive for -->
+                <div class="form-control">
+                    <label class="label mb-1 p-0">
+                        <span class="label-text text-base">Archive tabs inactive for:</span>
+                    </label>
+                    <div class="join w-full">
+                        <input
+                            type="number"
+                            id="archiveTimeValue"
+                            min="1"
+                            class="input input-bordered join-item w-full flex-grow"
+                            placeholder="Time value"
+                        />
+                        <select id="archiveTimeUnit" class="select select-bordered join-item">
+                            <option value="minutes">Minutes</option>
+                            <option value="hours">Hours</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Archive in Incognito windows -->
+                <div class="form-control">
+                    <label class="label cursor-pointer p-0">
+                        <span class="label-text text-base">Archive in Incognito windows</span>
+                        <input
+                            type="checkbox"
+                            id="archiveInIncognito"
+                            class="toggle toggle-secondary"
+                        />
+                    </label>
+                </div>
+
+                <!-- Enable Tab Sorting -->
+                <div class="form-control">
+                    <label class="label cursor-pointer p-0">
+                        <span class="label-text text-base">Enable Tab Sorting</span>
+                        <input
+                            type="checkbox"
+                            id="tabSortingEnabled"
+                            class="toggle toggle-accent"
+                        />
+                    </label>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="./src/popup/popup.ts"></script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "module": "ESNext",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "rootDir": "./", // プロジェクトルートをrootDirに
+        "moduleResolution": "bundler", // Vite推奨
+        "noEmit": true, // ViteがビルドするのでTypeScriptコンパイラは出力しない
+        "resolveJsonModule": true, // JSONファイルのインポートを許可
+        "types": ["vite/client", "chrome"] // Viteのクライアント型定義とChrome型定義
+    },
+    "include": [
+        "src/**/*.ts",
+        "vite.config.ts",
+        "tailwind.config.js", // 設定ファイルもTSチェック対象に含める場合
+        "postcss.config.js"
+    ],
+    "exclude": ["node_modules", "dist"]
+}
